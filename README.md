@@ -11,6 +11,7 @@ The data will be read from a Google Sheet - here is the link to a sample:
 https://docs.google.com/spreadsheets/d/1ZxJOzGoR6jGNgI89g50KGbjGitYe6IIpSGDLXmiUfrc/edit#gid=0
 
 The Mapbox sample code for reading from Google Sheets can be found here:
+
 https://www.mapbox.com/impact-tools/sheet-mapper
 
 The following graphics give an idea of what I want to accomplish:
