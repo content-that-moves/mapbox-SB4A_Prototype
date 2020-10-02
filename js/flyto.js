@@ -1,4 +1,4 @@
-<script>
+
 document.getElementById('FlytoGhana').addEventListener('click', function() {
       map.flyTo({
          	speed: 0.3, 
@@ -29,4 +29,3 @@ document.getElementById('FlytoGhana').addEventListener('click', function() {
 				bearing: -0.14     
         });
     });
-    </script>
