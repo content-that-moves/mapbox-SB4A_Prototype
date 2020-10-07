@@ -1142,6 +1142,10 @@
           </div>
 
 
+          <div id="stateofplay-info" style="background-color:white; padding:20px; font-size: 20px;">
+            Some info about this section.<br>
+            Please click on the marker.
+          </div>
           <div class="map-overlay" id="marker-info">
             <div id="legend"></div>
             <div id="next-prev-buttons">
@@ -1317,6 +1321,17 @@
     };
     var activeChapterName = 'chinatown';
     function setActiveChapter(chapterName) {
+      console.log('chapterName', chapterName);
+
+      if (chapterName === 'stateofplay') { //show pins 
+        console.log('true!!!!', true);
+        pulsationMarkersVisibility(true)
+      } else {
+        pulsationMarkersVisibility(false)
+        infoDiv(true)
+      }
+
+
       if (chapterName === activeChapterName) return;
       map.flyTo(chapters[chapterName]);
       document.getElementById(chapterName).setAttribute('class', 'active');

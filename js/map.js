@@ -74,6 +74,8 @@ map.on('load', () => {
 
             div.addEventListener('click', (e) => {
 
+                infoDiv(false)
+
                 // info.style.display = 'inherit';
                 currentMarker = index;
                 // for blue ring
@@ -163,10 +165,22 @@ map.on('load', () => {
             });
             allMarkers.push(div)
         })
-
+        pulsationMarkersVisibility(false) // hide markes 
     })
 
 })
+
+function pulsationMarkersVisibility(visible){
+    allMarkers.forEach(i=>{
+        i.style.display = visible ? '' : 'none'
+        i.querySelector(".ringring").style['border-color'] = "red" //reset pulsation colors
+    });
+}
+
+function infoDiv(visible){
+    document.getElementById("stateofplay-info").style.display = visible ? '' : 'none';
+    document.getElementById("marker-info").style.display = visible ? 'none' : '';
+}
 
 var event = new Event('click');
 next.addEventListener("click", i => {
